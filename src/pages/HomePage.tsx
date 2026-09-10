@@ -4,7 +4,6 @@ import { COMMUNITY_EVENTS } from '../data/events';
 import { CommunityEvent, PageRoute } from '../types';
 import { GrotMascot } from '../components/GrotMascot';
 import { FluidHeroGradient } from '../components/FluidHeroGradient';
-import { MascotDisplay } from '../components/MascotDisplay';
 
 interface HomePageProps {
   events?: CommunityEvent[];
@@ -25,7 +24,7 @@ export const HomePage: React.FC<HomePageProps> = ({ events = COMMUNITY_EVENTS, o
          ───────────────────────────────────────────────────────────── */}
       <section
         id="hero-gradient-section"
-        className="relative w-full overflow-hidden pt-12 sm:pt-20 md:pt-24 pb-16 sm:pb-24 border-b border-[#E8E5E1]"
+        className="relative w-full overflow-hidden pt-20 sm:pt-28 md:pt-32 pb-16 sm:pb-24 border-b border-[#E8E5E1]"
       >
         {/* Full fluid blurry gradient in the background */}
         <FluidHeroGradient />
@@ -57,11 +56,6 @@ export const HomePage: React.FC<HomePageProps> = ({ events = COMMUNITY_EVENTS, o
                 </button>
               </div>
             </div>
-
-            {/* Mascot picture */}
-            <div className="flex justify-start md:justify-end md:pr-4 pt-2 md:pt-0">
-              <MascotDisplay />
-            </div>
           </div>
         </div>
       </section>
@@ -71,28 +65,88 @@ export const HomePage: React.FC<HomePageProps> = ({ events = COMMUNITY_EVENTS, o
          ───────────────────────────────────────────────────────────── */}
       <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12 space-y-24 sm:space-y-32 pt-16 sm:pt-20">
         <section className="pt-4">
-        <div className="space-y-6">
-          {/* Section index marker */}
-          <div className="font-mono text-xs text-[#6B6B6B] uppercase tracking-wider">
-            01 <span className="mx-2 text-[#E8E5E1]">/</span> ABOUT
+        <div className="relative rounded-2xl bg-gradient-to-br from-[#FAFAF8] via-[#F4F2EE] to-[#EAE6DF] border border-[#E2DDD5] p-6 sm:p-10 lg:p-12 shadow-sm overflow-hidden space-y-10">
+          {/* Subtle decorative glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#FF8800]/10 via-[#F97316]/5 to-transparent rounded-full blur-3xl pointer-events-none" />
+          
+          {/* Section index marker & status chip */}
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <div className="font-mono text-xs text-[#6B6B6B] uppercase tracking-wider flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#FF8800]" />
+              <span>01</span>
+              <span className="text-[#C4BEB4]">/</span>
+              <span>ABOUT THE CHAPTER</span>
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-[#DDD7CD] px-3 py-1 rounded-full text-xs font-mono text-[#171717] shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse" />
+              <span>Active Community in Chennai, TN</span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 pt-4">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14 pt-2">
             {/* Left */}
-            <div className="md:col-span-5">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#171717] leading-snug">
-                A community for people who build and operate things.
+            <div className="md:col-span-6 space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-[#171717] leading-[1.18] tracking-tight">
+                A home for people who <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#171717] via-[#FF8800] to-[#E65100]">build &amp; operate</span> reliable systems.
               </h2>
+              <p className="text-base sm:text-lg text-[#525252] leading-relaxed pt-2">
+                Grafana Chennai brings together engineers, platform architects, SREs, students, and open-source practitioners across Tamil Nadu to master observability and cloud infrastructure.
+              </p>
             </div>
 
-            {/* Right */}
-            <div className="md:col-span-7 flex flex-col justify-between space-y-6">
-              <p className="text-base sm:text-lg text-[#6B6B6B] leading-relaxed">
-                Grafana Chennai brings together engineers, developers, students and open-source contributors to learn about observability, share ideas and meet others working with modern infrastructure.
-              </p>
-              <p className="text-sm sm:text-base text-[#6B6B6B] leading-relaxed">
-                We meet in person across Chennai to talk about metrics architectures, distributed traces, log pipelines, dashboards, and production incident lessons. Free to attend and organized by the community.
-              </p>
+            {/* Right: Feature Highlights Grid */}
+            <div className="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-white/90 backdrop-blur-sm border border-[#E2DDD5] rounded-xl p-5 shadow-xs hover:border-[#FF8800]/40 transition-colors">
+                <div className="font-mono text-xs uppercase tracking-wider text-[#FF8800] font-semibold mb-2">01. Meetups &amp; Labs</div>
+                <div className="text-sm font-medium text-[#171717] mb-1">In-Person Gatherings</div>
+                <div className="text-xs text-[#6B6B6B] leading-relaxed">
+                  Regular offline sessions across Chennai hubs (OMR, Guindy, T.Nagar) with deep technical workshops.
+                </div>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm border border-[#E2DDD5] rounded-xl p-5 shadow-xs hover:border-[#FF8800]/40 transition-colors">
+                <div className="font-mono text-xs uppercase tracking-wider text-[#FF8800] font-semibold mb-2">02. The LGTM Stack</div>
+                <div className="text-sm font-medium text-[#171717] mb-1">Metrics, Logs &amp; Traces</div>
+                <div className="text-xs text-[#6B6B6B] leading-relaxed">
+                  Loki, Grafana, Tempo, Mimir, OpenTelemetry and Prometheus architectures decoded hands-on.
+                </div>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm border border-[#E2DDD5] rounded-xl p-5 shadow-xs hover:border-[#FF8800]/40 transition-colors">
+                <div className="font-mono text-xs uppercase tracking-wider text-[#FF8800] font-semibold mb-2">03. Production Realities</div>
+                <div className="text-sm font-medium text-[#171717] mb-1">War Stories &amp; SRE</div>
+                <div className="text-xs text-[#6B6B6B] leading-relaxed">
+                  Candid post-mortems, high-throughput tuning lessons, and incident triage runbooks.
+                </div>
+              </div>
+
+              <div className="bg-white/90 backdrop-blur-sm border border-[#E2DDD5] rounded-xl p-5 shadow-xs hover:border-[#FF8800]/40 transition-colors">
+                <div className="font-mono text-xs uppercase tracking-wider text-[#FF8800] font-semibold mb-2">04. 100% Free &amp; Open</div>
+                <div className="text-sm font-medium text-[#171717] mb-1">By &amp; For Chennai</div>
+                <div className="text-xs text-[#6B6B6B] leading-relaxed">
+                  Always free to attend, student-friendly, and driven by volunteer local technologists.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Metrics Bar */}
+          <div className="pt-6 border-t border-[#E2DDD5]/80 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <div>
+              <div className="text-2xl sm:text-3xl font-light text-[#171717] font-mono">1,200+</div>
+              <div className="text-xs text-[#6B6B6B] uppercase tracking-wider font-mono mt-0.5">Local Members</div>
+            </div>
+            <div>
+              <div className="text-2xl sm:text-3xl font-light text-[#171717] font-mono">14+</div>
+              <div className="text-xs text-[#6B6B6B] uppercase tracking-wider font-mono mt-0.5">Meetups Hosted</div>
+            </div>
+            <div>
+              <div className="text-2xl sm:text-3xl font-light text-[#171717] font-mono">35+</div>
+              <div className="text-xs text-[#6B6B6B] uppercase tracking-wider font-mono mt-0.5">Tech Talks</div>
+            </div>
+            <div>
+              <div className="text-2xl sm:text-3xl font-light text-[#10B981] font-mono">0 ₹</div>
+              <div className="text-xs text-[#6B6B6B] uppercase tracking-wider font-mono mt-0.5">Always Free</div>
             </div>
           </div>
         </div>

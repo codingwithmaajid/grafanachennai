@@ -229,11 +229,11 @@ export const CommunityPage: React.FC<CommunityPageProps> = ({ onNavigate: _onNav
                 </p>
                 <div className="pt-1">
                   <a
-                    href="/grot-mascot.svg"
-                    download="grot-mascot.svg"
+                    href="/images-removebg-preview.png"
+                    download="images-removebg-preview.png"
                     className="inline-flex items-center gap-1.5 font-mono text-[11px] text-[#F2652A] hover:underline"
                   >
-                    <span>Download Grot Mascot SVG</span>
+                    <span>Download Grot Mascot PNG</span>
                     <span>↓</span>
                   </a>
                 </div>
@@ -253,7 +253,7 @@ export const CommunityPage: React.FC<CommunityPageProps> = ({ onNavigate: _onNav
             </div>
 
             <p className="text-xs text-[#6B6B6B] leading-relaxed">
-              Clean, scalable SVG vector assets for speaker slides, community posters, and technical hackathon projects.
+              Clean, scalable assets for speaker slides, community posters, and technical hackathon projects.
             </p>
 
             {/* Asset downloads */}
@@ -271,15 +271,15 @@ export const CommunityPage: React.FC<CommunityPageProps> = ({ onNavigate: _onNav
               </a>
 
               <a
-                href="/grot-mascot.svg"
-                download="grot-mascot.svg"
+                href="/images-removebg-preview.png"
+                download="images-removebg-preview.png"
                 className="flex items-center justify-between p-3 border border-[#E8E5E1] hover:border-[#F2652A] transition-colors group"
               >
                 <div className="flex items-center gap-2.5">
                   <span className="w-4 h-4 rounded-full bg-[#F2652A] flex items-center justify-center text-[10px] text-white font-bold">G</span>
-                  <span className="text-[#171717] font-medium">Grot Mascot Artwork</span>
+                  <span className="text-[#171717] font-medium">Grot Mascot PNG (Official)</span>
                 </div>
-                <span className="text-[#F2652A] group-hover:translate-y-0.5 transition-transform">SVG ↓</span>
+                <span className="text-[#F2652A] group-hover:translate-y-0.5 transition-transform">PNG ↓</span>
               </a>
             </div>
 

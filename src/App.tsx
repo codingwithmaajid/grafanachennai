@@ -155,7 +155,7 @@ export default function App() {
         )}
 
         {route.type === 'events' && (
-          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12">
+          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12 pt-14 sm:pt-16">
             <EventsPage
               events={events}
               onNavigate={(r) => navigate(r)}
@@ -165,7 +165,7 @@ export default function App() {
         )}
 
         {route.type === 'add-event' && (
-          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12">
+          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12 pt-14 sm:pt-16">
             <div className="pt-12 sm:pt-20 max-w-3xl mx-auto">
               <AddEventForm
                 existingEvents={events}
@@ -177,7 +177,7 @@ export default function App() {
         )}
 
         {route.type === 'event-detail' && currentEvent && (
-          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12">
+          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12 pt-14 sm:pt-16">
             <EventDetailPage
               event={currentEvent}
               onNavigate={(r) => navigate(r)}
@@ -186,7 +186,7 @@ export default function App() {
         )}
 
         {route.type === 'community' && (
-          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12">
+          <div className="max-w-[1280px] xl:max-w-[1360px] mx-auto px-5 sm:px-10 lg:px-12 pt-14 sm:pt-16">
             <CommunityPage onNavigate={(r) => navigate(r)} />
           </div>
         )}
