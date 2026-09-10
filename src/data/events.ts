@@ -1,0 +1,320 @@
+import { CommunityEvent } from '../types';
+
+export const COMMUNITY_EVENTS: CommunityEvent[] = [
+  {
+    slug: 'grafana-friends-chennai',
+    eventNumber: 'EVENT / 01',
+    numberOnly: '01',
+    title: 'Grafana & Friends Chennai',
+    tags: ['Observability', 'Open Source'],
+    dateIso: '2026-09-18',
+    dateDisplay: {
+      day: '18',
+      month: 'SEP',
+      monthFull: 'SEPTEMBER',
+      year: '2026',
+    },
+    timeDisplay: '18:00 — 20:30',
+    timeShort: '6:00 PM',
+    city: 'Chennai',
+    location: {
+      name: 'IIT Madras Research Park, Auditorium 2',
+      city: 'Chennai',
+      address: 'Kanagam Road, Taramani, Chennai, Tamil Nadu 600113',
+      mapUrl: 'https://maps.google.com/?q=IIT+Madras+Research+Park+Chennai',
+      coordinates: '12.9902° N, 80.2425° E',
+    },
+    description:
+      'An evening with the Grafana community in Chennai, bringing together engineers and developers working with observability, cloud-native infrastructure and open source.',
+    detailedAbout:
+      'Join us for our flagship gathering of observability practitioners, platform engineers, and open-source contributors in Chennai. We will dive into real-world production setups using Grafana, Loki, Tempo, and Mimir, exploring how engineering teams manage high-cardinality metrics and distributed traces at scale. Whether you are running your first dashboard or operating clusters ingesting billions of samples daily, you will find peer engineers to exchange battle-tested insights with.',
+    isNextEvent: true,
+    isUpcoming: true,
+    speakers: [
+      {
+        id: 'spk-1',
+        name: 'Praveen Kumar',
+        role: 'Staff Infrastructure Engineer',
+        company: 'Freshworks',
+        talkTitle: 'Tracing at Scale: Operating Grafana Tempo with 10B+ Spans Daily',
+        bio: 'Focused on cloud-native observability, distributed systems reliability, and OpenTelemetry instrumentation.',
+      },
+      {
+        id: 'spk-2',
+        name: 'Ananya Sundaram',
+        role: 'Lead SRE & Platform Contributor',
+        company: 'Zoho Corporation',
+        talkTitle: 'Zero-Noise Alerting: Correlating Loki Logs and Prometheus Metrics',
+        bio: 'Observability lead working on high-throughput log indexing, multi-tenant Kubernetes observability, and on-call ergonomics.',
+      },
+    ],
+    schedule: [
+      { time: '18:00', title: 'Doors open & Check-in', detail: 'Badge collection, informal coffee, and hallway conversations' },
+      { time: '18:30', title: 'Welcome & Community Note', detail: 'Brief welcome from the Grafana Chennai organizers' },
+      { time: '18:40', title: 'Talk: Tracing at Scale with Grafana Tempo', detail: 'Praveen Kumar on handling high span volumes in production' },
+      { time: '19:15', title: 'Talk: Correlating Loki Logs & Prometheus Metrics', detail: 'Ananya Sundaram on actionable observability without alert fatigue' },
+      { time: '19:45', title: 'Open Q&A & Lightning Community Demos', detail: 'Open stage for 3-minute community dashboard walkthroughs' },
+      { time: '20:15', title: 'Networking & Refreshments', detail: 'South Indian snacks, coffee, and informal technical discussions' },
+      { time: '20:30', title: 'End', detail: 'Wrap-up and venue close' },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Attendees during the technical architecture session',
+        aspect: 'large',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop',
+        caption: 'Hallway track and collaborative discussions',
+        aspect: 'small',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=800&auto=format&fit=crop',
+        caption: 'Audience Q&A around production Prometheus queries',
+        aspect: 'small',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Informal networking after the closing remarks',
+        aspect: 'large',
+      },
+    ],
+  },
+  {
+    slug: 'observability-meetup-july',
+    eventNumber: 'EVENT / 02',
+    numberOnly: '02',
+    title: 'Observability Meetup',
+    tags: ['Grafana', 'Prometheus'],
+    dateIso: '2026-07-12',
+    dateDisplay: {
+      day: '12',
+      month: 'JUL',
+      monthFull: 'JULY',
+      year: '2026',
+    },
+    timeDisplay: '10:30 — 13:00',
+    timeShort: '10:30 AM',
+    city: 'Chennai',
+    location: {
+      name: 'Thoughtworks DLF Cybercity',
+      city: 'Chennai',
+      address: 'Block 5, DLF IT Park, Mount Poonamallee Road, Manapakkam, Chennai 600089',
+      mapUrl: 'https://maps.google.com/?q=DLF+IT+Park+Manapakkam+Chennai',
+      coordinates: '13.0189° N, 80.1747° E',
+    },
+    description:
+      'A technical morning focused on Prometheus query optimization, storage retention strategies, and Grafana dashboard ergonomics for production clusters.',
+    detailedAbout:
+      'This meetup focused on hands-on metric architectures. We explored PromQL query performance, subqueries vs recording rules, and best practices for structuring dashboards so incident responders can locate the root cause within seconds rather than minutes.',
+    isNextEvent: false,
+    isUpcoming: false,
+    speakers: [
+      {
+        id: 'spk-3',
+        name: 'Karthik V.',
+        role: 'Principal DevOps Architect',
+        company: 'CloudMinds',
+        talkTitle: 'Mastering PromQL: Reducing CPU overhead of recording rules',
+      },
+      {
+        id: 'spk-4',
+        name: 'Divya Ramesh',
+        role: 'Site Reliability Engineer',
+        company: 'Kissflow',
+        talkTitle: 'Dashboard Typography & Information Hierarchy for NOC Rooms',
+      },
+    ],
+    schedule: [
+      { time: '10:30', title: 'Doors open & Chai', detail: 'Welcome refreshments and informal check-in' },
+      { time: '10:50', title: 'PromQL Deep Dive', detail: 'Recording rules, cardinality management, and subquery pitfalls' },
+      { time: '11:40', title: 'Ergonomic Dashboard Design', detail: 'Building NOC dashboards that answer questions at a glance' },
+      { time: '12:20', title: 'Open Troubleshooting Clinic', detail: 'Live troubleshooting of community metrics issues' },
+      { time: '13:00', title: 'Wrap-up', detail: 'Post-meetup lunch conversations' },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Hands-on query walkthrough and metric analysis',
+        aspect: 'large',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop',
+        caption: 'Small group breakout on Thanos storage architecture',
+        aspect: 'small',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop',
+        caption: 'Open floor discussion on incident review routines',
+        aspect: 'small',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Group photo of attendees at DLF Cybercity',
+        aspect: 'large',
+      },
+    ],
+  },
+  {
+    slug: 'intro-to-observability',
+    eventNumber: 'EVENT / 03',
+    numberOnly: '03',
+    title: 'Introduction to Observability',
+    tags: ['Grafana', 'Monitoring'],
+    dateIso: '2026-05-24',
+    dateDisplay: {
+      day: '24',
+      month: 'MAY',
+      monthFull: 'MAY',
+      year: '2026',
+    },
+    timeDisplay: '16:00 — 18:30',
+    timeShort: '4:00 PM',
+    city: 'Chennai',
+    location: {
+      name: 'Anna University Tech Innovation Centre',
+      city: 'Chennai',
+      address: 'Sardar Patel Road, Guindy, Chennai, Tamil Nadu 600025',
+      mapUrl: 'https://maps.google.com/?q=Anna+University+Guindy+Chennai',
+      coordinates: '13.0102° N, 80.2355° E',
+    },
+    description:
+      'A practical foundation session covering the core pillars of observability: logs, metrics, and traces, designed for students, developers, and junior SREs.',
+    detailedAbout:
+      'We welcomed students and developers taking their first steps into site reliability engineering. The session walked through setting up an end-to-end local Grafana sandbox on Docker, querying sample data, and configuring notification channels.',
+    isNextEvent: false,
+    isUpcoming: false,
+    speakers: [
+      {
+        id: 'spk-5',
+        name: 'Siddharth Raman',
+        role: 'Observability Consultant & OSS Advocate',
+        company: 'OpenTelemetry India',
+        talkTitle: 'The Three Pillars & Beyond: Understanding Modern Telemetry Signals',
+      },
+    ],
+    schedule: [
+      { time: '16:00', title: 'Check-in & Setup Assistance', detail: 'Helping attendees install Docker and sample repos' },
+      { time: '16:30', title: 'Observability Foundations', detail: 'Why simple health checks fail in microservices' },
+      { time: '17:15', title: 'Hands-on Dashboard Lab', detail: 'Building your first Prometheus + Grafana alert rule' },
+      { time: '18:15', title: 'Open Source Pathways', detail: 'How to make your first PR to Grafana or OpenTelemetry' },
+      { time: '18:30', title: 'Close', detail: 'Community group catch-up' },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Lab demo demonstrating telemetry pipelines on laptops',
+        aspect: 'large',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop',
+        caption: 'Organizers answering questions on metric scraping intervals',
+        aspect: 'small',
+      },
+    ],
+  },
+  {
+    slug: 'opentelemetry-chennai-meetup',
+    eventNumber: 'EVENT / 04',
+    numberOnly: '04',
+    title: 'OpenTelemetry & Cloud-Native Tracing',
+    tags: ['OpenTelemetry', 'Distributed Tracing'],
+    dateIso: '2026-02-28',
+    dateDisplay: {
+      day: '28',
+      month: 'FEB',
+      monthFull: 'FEBRUARY',
+      year: '2026',
+    },
+    timeDisplay: '10:00 — 12:30',
+    timeShort: '10:00 AM',
+    city: 'Chennai',
+    location: {
+      name: 'Amazon Development Centre',
+      city: 'Chennai',
+      address: 'SP Infocity, MGR Salai, Perungudi, Chennai 600096',
+      mapUrl: 'https://maps.google.com/?q=SP+Infocity+Perungudi+Chennai',
+      coordinates: '12.9698° N, 80.2458° E',
+    },
+    description:
+      'Understanding OTel collectors, auto-instrumentation tradeoffs in JVM and Go, and exporting unified traces into Grafana Tempo.',
+    detailedAbout:
+      'Engineers gathered to discuss vendor-neutral instrumentation. We covered the OpenTelemetry Collector architecture, processor pipelines, batching, and sampling algorithms to prevent trace storage explosion.',
+    isNextEvent: false,
+    isUpcoming: false,
+    speakers: [
+      {
+        id: 'spk-6',
+        name: 'Ravi Teja',
+        role: 'Cloud Architect',
+        company: 'Paytm Payments Bank',
+        talkTitle: 'Head-based vs Tail-based Sampling in High QPS Services',
+      },
+    ],
+    schedule: [
+      { time: '10:00', title: 'Welcome', detail: 'Opening remarks' },
+      { time: '10:20', title: 'OTel Collector in Production', detail: 'Architectural patterns for pipeline resilience' },
+      { time: '11:20', title: 'Live Benchmarks & Discussion', detail: 'Comparing collector CPU footprints' },
+      { time: '12:30', title: 'End', detail: 'Event conclusion' },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop',
+        caption: 'Community discussion on trace sampling rates',
+        aspect: 'large',
+      },
+    ],
+  },
+  {
+    slug: 'inaugural-chennai-observability-night',
+    eventNumber: 'EVENT / 05',
+    numberOnly: '05',
+    title: 'Inaugural Community Meetup',
+    tags: ['Community', 'Observability'],
+    dateIso: '2025-11-15',
+    dateDisplay: {
+      day: '15',
+      month: 'NOV',
+      monthFull: 'NOVEMBER',
+      year: '2025',
+    },
+    timeDisplay: '17:30 — 20:00',
+    timeShort: '5:30 PM',
+    city: 'Chennai',
+    location: {
+      name: 'The Hive Coworking, VR Chennai',
+      city: 'Chennai',
+      address: 'Jawaharlal Nehru Road, Thirumangalam, Anna Nagar, Chennai 600040',
+      mapUrl: 'https://maps.google.com/?q=The+Hive+VR+Chennai',
+      coordinates: '13.0850° N, 80.1989° E',
+    },
+    description:
+      'The kick-off meetup that formed Grafana Chennai. 45 engineers met to build the community roadmap and share day-to-day monitoring challenges.',
+    detailedAbout:
+      'Our very first meetup! SREs, developers, and DevOps practitioners from across Chennai came together to launch an open, vendor-neutral community centered around observability practices, modern metrics tooling, and shared operational learning.',
+    isNextEvent: false,
+    isUpcoming: false,
+    speakers: [
+      {
+        id: 'spk-7',
+        name: 'Community Organizers',
+        role: 'Grafana Chennai Core Team',
+        company: 'Grafana Chennai',
+        talkTitle: 'Why Chennai Needs a Dedicated Observability Community',
+      },
+    ],
+    schedule: [
+      { time: '17:30', title: 'Doors open', detail: 'Welcome and community meet & greet' },
+      { time: '18:00', title: 'Founding Charter', detail: 'Mission, values, and community guidelines' },
+      { time: '18:45', title: 'Lightning Round: Your Biggest Monitoring Outage', detail: 'War stories and learnings' },
+      { time: '20:00', title: 'End', detail: 'Group photo and roadmap planning' },
+    ],
+    photos: [
+      {
+        url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop',
+        caption: 'The inaugural Grafana Chennai community attendees',
+        aspect: 'large',
+      },
+    ],
+  },
+];

@@ -1,0 +1,6 @@
+{
+  "name": "Grafana Chennai",
+  "description": "Community website for Grafana Chennai — Observability, Open Source & Infrastructure in Chennai, India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
